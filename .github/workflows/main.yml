@@ -3,7 +3,7 @@ name: Docker image workflow
 on:
   push:
     branches: 
-      - master
+      - main
 
 jobs:
   dockerize:
