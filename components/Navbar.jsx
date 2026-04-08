@@ -24,7 +24,10 @@ function Navbar() {
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl mt-2">Code-O-Gram</h1>
         <button className="mt-8">Home</button>
-        <button>Post</button>
+        <Link className="flex items-center justify-center" href={"/post"}>
+          <button>Post</button>
+        </Link>
+
         <button>Find</button>
       </div>
 

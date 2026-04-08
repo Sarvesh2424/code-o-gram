@@ -1,9 +1,9 @@
-import CodeOGramClient from "@/components/CodeOGramClient";
+import PostClient from "@/components/PostClient";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-export default async function Home() {
+async function Post() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
@@ -11,5 +11,7 @@ export default async function Home() {
     redirect("/login");
   }
 
-  return <CodeOGramClient />;
+  return <PostClient />;
 }
+
+export default Post;
